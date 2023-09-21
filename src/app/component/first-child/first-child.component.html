@@ -1,0 +1,48 @@
+
+    <div class="bg-light p-5">
+        <div class="container bg-dark rounded py-5">
+            <h1 class="text-white text-center ">Student Login</h1>
+            <hr class="text-white">
+            <div class="row m-auto">
+
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <label for="studentName" class="form-label">Student name</label>
+                        <input
+                        type="text"
+                        class="form-control"
+                        id="studentName"
+                        placeholder="Enter Student Name"
+                        value=""
+                        name="studentName"
+                        [(ngModel)]="studentName"
+                        />
+                        <p class="text-white text-center">{{studentName}}</p>
+                        
+                        <div class="valid-feedback">Success Message</div>
+                        <div class="invalid-feedback">Length must be than 3</div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="age" class="form-label" >Student Age</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="age"
+                            value=""
+                            placeholder="Enter Student Age"
+                            name="studentAge"
+                            [(ngModel)]="studentAge"
+                        />
+                        <p class="text-white text-center">{{studentAge}}</p>
+
+                        <div class="valid-feedback">Success Message</div>
+                        <div class="invalid-feedback">Age  must be greater than 18</div>
+                    </div>
+                    <div class="col-12 " style="text-align: center;">
+                        <button class="btn btn-info my-3" type="button"  (click)="addStudent()">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>

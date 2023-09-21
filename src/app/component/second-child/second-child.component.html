@@ -1,0 +1,20 @@
+<div class="bg-dark text-light p-5 text-center">
+    <h1 class="py-3">Student List</h1>
+    <div class="container">
+        <div class="row" *ngFor="let x of dataFromParent; let i = index" >
+            <div class="col-md-5">
+                <h6>Name</h6>
+                <p>{{x.studentName}}</p>
+            </div>
+            <div class="col-md-5">
+                <h6>Age</h6>
+                <p>{{x.studentAge}}</p>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- *ngFor="let x of studentList; let i = index" -->
